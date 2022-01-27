@@ -14,6 +14,7 @@ protocol HomePresenterProtocol: AnyObject {
     var wireframe: HomeWireframeProtocol? { get set }
     
     /// View --> Presenter
+    func viewDidLoad()
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {
@@ -28,6 +29,16 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     var wireframe: HomeWireframeProtocol?
     
     // MARK: View --> Presenter
+    func viewDidLoad() {
+        interactor?.fetchQuestions(text: "swiftui", completion: { [weak self] result in
+            switch result {
+            case .success(let questionsResponse):
+                print(questionsResponse)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
+    }
     
     // MARK: Interactor --> Presenter
 }

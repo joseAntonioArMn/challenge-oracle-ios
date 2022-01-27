@@ -13,6 +13,7 @@ protocol HomeInteractorInputProtocol: AnyObject {
     var networkClient: NetworkClientType { get set }
     
     /// Presenter --> Interactor
+    func fetchQuestions(text: String, completion: @escaping (Result<JSONResponse<QuestionsResponse>, NetworkClientError>) -> Void)
 }
 
 class HomeInteractor: HomeInteractorInputProtocol {
@@ -22,4 +23,8 @@ class HomeInteractor: HomeInteractorInputProtocol {
     var networkClient: NetworkClientType = NetworkClient()
     
     // MARK: Presenter --> Interactor
+    func fetchQuestions(text: String, completion: @escaping (Result<JSONResponse<QuestionsResponse>, NetworkClientError>) -> Void) {
+        let request = HTTPRequest(url: UserEndpoints.searchQuestion(text: text).url)
+        networkClient.decodedJSONRequest(type: QuestionsResponse.self, request: request, completion: completion)
+    }
 }

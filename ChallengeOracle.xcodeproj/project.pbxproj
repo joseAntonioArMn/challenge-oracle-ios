@@ -26,6 +26,8 @@
 		AF654DB627A33B110027E79A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DB527A33B110027E79A /* HomeInteractor.swift */; };
 		AF654DB827A33B200027E79A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DB727A33B200027E79A /* HomePresenter.swift */; };
 		AF654DBA27A33B2C0027E79A /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DB927A33B2C0027E79A /* HomeRouter.swift */; };
+		AF654DBC27A33E640027E79A /* QuestionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DBB27A33E640027E79A /* QuestionsResponse.swift */; };
+		AF654DBE27A33E6D0027E79A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DBD27A33E6D0027E79A /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		AF654DB527A33B110027E79A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		AF654DB727A33B200027E79A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		AF654DB927A33B2C0027E79A /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		AF654DBB27A33E640027E79A /* QuestionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsResponse.swift; sourceTree = "<group>"; };
+		AF654DBD27A33E6D0027E79A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +232,8 @@
 		AF654DAD27A33A7C0027E79A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				AF654DBB27A33E640027E79A /* QuestionsResponse.swift */,
+				AF654DBD27A33E6D0027E79A /* Question.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF654DA527A3363D0027E79A /* HTTP.swift in Sources */,
+				AF654DBE27A33E6D0027E79A /* Question.swift in Sources */,
 				AF654DA127A336240027E79A /* HTTPTask.swift in Sources */,
 				AF654D9C27A335EB0027E79A /* URLSessionLoader.swift in Sources */,
 				AF654DB627A33B110027E79A /* HomeInteractor.swift in Sources */,
@@ -401,6 +408,7 @@
 				AF654D6827A333E90027E79A /* SceneDelegate.swift in Sources */,
 				AF654D9F27A336010027E79A /* NetworkClient.swift in Sources */,
 				AF654DA927A338D40027E79A /* ImageCacheHelper.swift in Sources */,
+				AF654DBC27A33E640027E79A /* QuestionsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
