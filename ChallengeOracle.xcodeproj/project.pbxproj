@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF654D6627A333E90027E79A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D6527A333E90027E79A /* AppDelegate.swift */; };
+		AF654D6827A333E90027E79A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D6727A333E90027E79A /* SceneDelegate.swift */; };
+		AF654D6A27A333E90027E79A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D6927A333E90027E79A /* ViewController.swift */; };
+		AF654D6D27A333E90027E79A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF654D6B27A333E90027E79A /* Main.storyboard */; };
+		AF654D6F27A333EC0027E79A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF654D6E27A333EC0027E79A /* Assets.xcassets */; };
+		AF654D7227A333EC0027E79A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF654D7027A333EC0027E79A /* LaunchScreen.storyboard */; };
+		AF654D7D27A333EC0027E79A /* ChallengeOracleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D7C27A333EC0027E79A /* ChallengeOracleTests.swift */; };
+		AF654D8827A333EC0027E79A /* ChallengeOracleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D8727A333EC0027E79A /* ChallengeOracleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF654D7927A333EC0027E79A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF654D5A27A333E90027E79A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF654D6127A333E90027E79A;
+			remoteInfo = ChallengeOracle;
+		};
+		AF654D8427A333EC0027E79A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF654D5A27A333E90027E79A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF654D6127A333E90027E79A;
+			remoteInfo = ChallengeOracle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF654D6227A333E90027E79A /* ChallengeOracle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeOracle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF654D6527A333E90027E79A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF654D6727A333E90027E79A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AF654D6927A333E90027E79A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF654D6C27A333E90027E79A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF654D6E27A333EC0027E79A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF654D7127A333EC0027E79A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF654D7327A333EC0027E79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF654D7827A333EC0027E79A /* ChallengeOracleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeOracleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF654D7C27A333EC0027E79A /* ChallengeOracleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOracleTests.swift; sourceTree = "<group>"; };
+		AF654D7E27A333EC0027E79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF654D8327A333EC0027E79A /* ChallengeOracleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeOracleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF654D8727A333EC0027E79A /* ChallengeOracleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOracleUITests.swift; sourceTree = "<group>"; };
+		AF654D8927A333EC0027E79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF654D5F27A333E90027E79A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF654D7527A333EC0027E79A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF654D8027A333EC0027E79A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF654D5927A333E90027E79A = {
+			isa = PBXGroup;
+			children = (
+				AF654D6427A333E90027E79A /* ChallengeOracle */,
+				AF654D7B27A333EC0027E79A /* ChallengeOracleTests */,
+				AF654D8627A333EC0027E79A /* ChallengeOracleUITests */,
+				AF654D6327A333E90027E79A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF654D6327A333E90027E79A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF654D6227A333E90027E79A /* ChallengeOracle.app */,
+				AF654D7827A333EC0027E79A /* ChallengeOracleTests.xctest */,
+				AF654D8327A333EC0027E79A /* ChallengeOracleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF654D6427A333E90027E79A /* ChallengeOracle */ = {
+			isa = PBXGroup;
+			children = (
+				AF654D6527A333E90027E79A /* AppDelegate.swift */,
+				AF654D6727A333E90027E79A /* SceneDelegate.swift */,
+				AF654D6927A333E90027E79A /* ViewController.swift */,
+				AF654D6B27A333E90027E79A /* Main.storyboard */,
+				AF654D6E27A333EC0027E79A /* Assets.xcassets */,
+				AF654D7027A333EC0027E79A /* LaunchScreen.storyboard */,
+				AF654D7327A333EC0027E79A /* Info.plist */,
+			);
+			path = ChallengeOracle;
+			sourceTree = "<group>";
+		};
+		AF654D7B27A333EC0027E79A /* ChallengeOracleTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF654D7C27A333EC0027E79A /* ChallengeOracleTests.swift */,
+				AF654D7E27A333EC0027E79A /* Info.plist */,
+			);
+			path = ChallengeOracleTests;
+			sourceTree = "<group>";
+		};
+		AF654D8627A333EC0027E79A /* ChallengeOracleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF654D8727A333EC0027E79A /* ChallengeOracleUITests.swift */,
+				AF654D8927A333EC0027E79A /* Info.plist */,
+			);
+			path = ChallengeOracleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF654D6127A333E90027E79A /* ChallengeOracle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF654D8C27A333EC0027E79A /* Build configuration list for PBXNativeTarget "ChallengeOracle" */;
+			buildPhases = (
+				AF654D5E27A333E90027E79A /* Sources */,
+				AF654D5F27A333E90027E79A /* Frameworks */,
+				AF654D6027A333E90027E79A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChallengeOracle;
+			productName = ChallengeOracle;
+			productReference = AF654D6227A333E90027E79A /* ChallengeOracle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF654D7727A333EC0027E79A /* ChallengeOracleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF654D8F27A333EC0027E79A /* Build configuration list for PBXNativeTarget "ChallengeOracleTests" */;
+			buildPhases = (
+				AF654D7427A333EC0027E79A /* Sources */,
+				AF654D7527A333EC0027E79A /* Frameworks */,
+				AF654D7627A333EC0027E79A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF654D7A27A333EC0027E79A /* PBXTargetDependency */,
+			);
+			name = ChallengeOracleTests;
+			productName = ChallengeOracleTests;
+			productReference = AF654D7827A333EC0027E79A /* ChallengeOracleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF654D8227A333EC0027E79A /* ChallengeOracleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF654D9227A333EC0027E79A /* Build configuration list for PBXNativeTarget "ChallengeOracleUITests" */;
+			buildPhases = (
+				AF654D7F27A333EC0027E79A /* Sources */,
+				AF654D8027A333EC0027E79A /* Frameworks */,
+				AF654D8127A333EC0027E79A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF654D8527A333EC0027E79A /* PBXTargetDependency */,
+			);
+			name = ChallengeOracleUITests;
+			productName = ChallengeOracleUITests;
+			productReference = AF654D8327A333EC0027E79A /* ChallengeOracleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF654D5A27A333E90027E79A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					AF654D6127A333E90027E79A = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					AF654D7727A333EC0027E79A = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = AF654D6127A333E90027E79A;
+					};
+					AF654D8227A333EC0027E79A = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = AF654D6127A333E90027E79A;
+					};
+				};
+			};
+			buildConfigurationList = AF654D5D27A333E90027E79A /* Build configuration list for PBXProject "ChallengeOracle" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF654D5927A333E90027E79A;
+			productRefGroup = AF654D6327A333E90027E79A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF654D6127A333E90027E79A /* ChallengeOracle */,
+				AF654D7727A333EC0027E79A /* ChallengeOracleTests */,
+				AF654D8227A333EC0027E79A /* ChallengeOracleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF654D6027A333E90027E79A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF654D7227A333EC0027E79A /* LaunchScreen.storyboard in Resources */,
+				AF654D6F27A333EC0027E79A /* Assets.xcassets in Resources */,
+				AF654D6D27A333E90027E79A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF654D7627A333EC0027E79A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF654D8127A333EC0027E79A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF654D5E27A333E90027E79A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF654D6A27A333E90027E79A /* ViewController.swift in Sources */,
+				AF654D6627A333E90027E79A /* AppDelegate.swift in Sources */,
+				AF654D6827A333E90027E79A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF654D7427A333EC0027E79A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF654D7D27A333EC0027E79A /* ChallengeOracleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF654D7F27A333EC0027E79A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF654D8827A333EC0027E79A /* ChallengeOracleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF654D7A27A333EC0027E79A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF654D6127A333E90027E79A /* ChallengeOracle */;
+			targetProxy = AF654D7927A333EC0027E79A /* PBXContainerItemProxy */;
+		};
+		AF654D8527A333EC0027E79A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF654D6127A333E90027E79A /* ChallengeOracle */;
+			targetProxy = AF654D8427A333EC0027E79A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF654D6B27A333E90027E79A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF654D6C27A333E90027E79A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF654D7027A333EC0027E79A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF654D7127A333EC0027E79A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF654D8A27A333EC0027E79A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF654D8B27A333EC0027E79A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF654D8D27A333EC0027E79A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LA858T59PP;
+				INFOPLIST_FILE = ChallengeOracle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonioarellano.ChallengeOracle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF654D8E27A333EC0027E79A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LA858T59PP;
+				INFOPLIST_FILE = ChallengeOracle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonioarellano.ChallengeOracle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF654D9027A333EC0027E79A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LA858T59PP;
+				INFOPLIST_FILE = ChallengeOracleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonioarellano.ChallengeOracleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChallengeOracle.app/ChallengeOracle";
+			};
+			name = Debug;
+		};
+		AF654D9127A333EC0027E79A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LA858T59PP;
+				INFOPLIST_FILE = ChallengeOracleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonioarellano.ChallengeOracleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChallengeOracle.app/ChallengeOracle";
+			};
+			name = Release;
+		};
+		AF654D9327A333EC0027E79A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LA858T59PP;
+				INFOPLIST_FILE = ChallengeOracleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonioarellano.ChallengeOracleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChallengeOracle;
+			};
+			name = Debug;
+		};
+		AF654D9427A333EC0027E79A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LA858T59PP;
+				INFOPLIST_FILE = ChallengeOracleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonioarellano.ChallengeOracleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChallengeOracle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF654D5D27A333E90027E79A /* Build configuration list for PBXProject "ChallengeOracle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF654D8A27A333EC0027E79A /* Debug */,
+				AF654D8B27A333EC0027E79A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF654D8C27A333EC0027E79A /* Build configuration list for PBXNativeTarget "ChallengeOracle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF654D8D27A333EC0027E79A /* Debug */,
+				AF654D8E27A333EC0027E79A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF654D8F27A333EC0027E79A /* Build configuration list for PBXNativeTarget "ChallengeOracleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF654D9027A333EC0027E79A /* Debug */,
+				AF654D9127A333EC0027E79A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF654D9227A333EC0027E79A /* Build configuration list for PBXNativeTarget "ChallengeOracleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF654D9327A333EC0027E79A /* Debug */,
+				AF654D9427A333EC0027E79A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF654D5A27A333E90027E79A /* Project object */;
+}
