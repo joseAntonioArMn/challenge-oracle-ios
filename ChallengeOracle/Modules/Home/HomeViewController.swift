@@ -85,6 +85,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let question = questions[indexPath.row]
+        presenter?.didSelectQuestion(question: question)
+    }
 }
 
 // MARK: - UISearchResultsUpdating

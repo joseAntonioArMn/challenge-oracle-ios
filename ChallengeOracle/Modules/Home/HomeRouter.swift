@@ -11,6 +11,7 @@ import UIKit
 protocol HomeWireframeProtocol: AnyObject {
     static func getHomeModule() -> UIViewController
     /// Presenter --> Wireframe
+    func presentDetailModule(withQuestion question: Question, fromViewController viewController: UIViewController)
 }
 
 class HomeWireframe: HomeWireframeProtocol {
@@ -38,4 +39,7 @@ class HomeWireframe: HomeWireframeProtocol {
     }
     
     // MARK: Presenter --> Wireframe
+    func presentDetailModule(withQuestion question: Question, fromViewController viewController: UIViewController) {
+        DetailWireframe.presentDetailModule(withQuestion: question, fromViewController: viewController)
+    }
 }

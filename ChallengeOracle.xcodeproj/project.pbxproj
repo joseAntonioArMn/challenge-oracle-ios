@@ -31,6 +31,11 @@
 		AF654DC127A34D790027E79A /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DBF27A34D790027E79A /* QuestionTableViewCell.swift */; };
 		AF654DC227A34D7A0027E79A /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF654DC027A34D790027E79A /* QuestionTableViewCell.xib */; };
 		AF654DC427A34D9B0027E79A /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DC327A34D9B0027E79A /* UITableViewCell+.swift */; };
+		AF654DCB27A358F60027E79A /* DetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF654DCA27A358F60027E79A /* DetailStoryboard.storyboard */; };
+		AF654DCD27A3590A0027E79A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DCC27A3590A0027E79A /* DetailViewController.swift */; };
+		AF654DCF27A359180027E79A /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DCE27A359180027E79A /* DetailInteractor.swift */; };
+		AF654DD127A359230027E79A /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DD027A359230027E79A /* DetailPresenter.swift */; };
+		AF654DD327A3592E0027E79A /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DD227A3592E0027E79A /* DetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,11 @@
 		AF654DBF27A34D790027E79A /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		AF654DC027A34D790027E79A /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
 		AF654DC327A34D9B0027E79A /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		AF654DCA27A358F60027E79A /* DetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStoryboard.storyboard; sourceTree = "<group>"; };
+		AF654DCC27A3590A0027E79A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AF654DCE27A359180027E79A /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		AF654DD027A359230027E79A /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		AF654DD227A3592E0027E79A /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +222,11 @@
 		AF654DAA27A33A3F0027E79A /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				AF654DC927A358D40027E79A /* View */,
+				AF654DC827A358CF0027E79A /* Interactor */,
+				AF654DC727A358C90027E79A /* Presenter */,
+				AF654DC627A358C40027E79A /* Entities */,
+				AF654DC527A358BE0027E79A /* Router */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -268,6 +283,46 @@
 				AF654DB327A33AC50027E79A /* HomeViewController.swift */,
 				AF654DBF27A34D790027E79A /* QuestionTableViewCell.swift */,
 				AF654DC027A34D790027E79A /* QuestionTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AF654DC527A358BE0027E79A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AF654DD227A3592E0027E79A /* DetailRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		AF654DC627A358C40027E79A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		AF654DC727A358C90027E79A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AF654DD027A359230027E79A /* DetailPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		AF654DC827A358CF0027E79A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AF654DCE27A359180027E79A /* DetailInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		AF654DC927A358D40027E79A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF654DCA27A358F60027E79A /* DetailStoryboard.storyboard */,
+				AF654DCC27A3590A0027E79A /* DetailViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -378,6 +433,7 @@
 				AF654D7227A333EC0027E79A /* LaunchScreen.storyboard in Resources */,
 				AF654DC227A34D7A0027E79A /* QuestionTableViewCell.xib in Resources */,
 				AF654D6F27A333EC0027E79A /* Assets.xcassets in Resources */,
+				AF654DCB27A358F60027E79A /* DetailStoryboard.storyboard in Resources */,
 				AF654DB227A33AB50027E79A /* HomeStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,15 +460,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF654DA527A3363D0027E79A /* HTTP.swift in Sources */,
+				AF654DD327A3592E0027E79A /* DetailRouter.swift in Sources */,
 				AF654DBE27A33E6D0027E79A /* Question.swift in Sources */,
 				AF654DA127A336240027E79A /* HTTPTask.swift in Sources */,
 				AF654D9C27A335EB0027E79A /* URLSessionLoader.swift in Sources */,
 				AF654DB627A33B110027E79A /* HomeInteractor.swift in Sources */,
+				AF654DD127A359230027E79A /* DetailPresenter.swift in Sources */,
 				AF654DA327A336320027E79A /* HTTPLoader.swift in Sources */,
 				AF654D9A27A335D80027E79A /* UserEndpoints.swift in Sources */,
 				AF654D6627A333E90027E79A /* AppDelegate.swift in Sources */,
 				AF654DA727A338930027E79A /* Encodable+.swift in Sources */,
 				AF654DC427A34D9B0027E79A /* UITableViewCell+.swift in Sources */,
+				AF654DCD27A3590A0027E79A /* DetailViewController.swift in Sources */,
+				AF654DCF27A359180027E79A /* DetailInteractor.swift in Sources */,
 				AF654DC127A34D790027E79A /* QuestionTableViewCell.swift in Sources */,
 				AF654DB427A33AC50027E79A /* HomeViewController.swift in Sources */,
 				AF654DBA27A33B2C0027E79A /* HomeRouter.swift in Sources */,

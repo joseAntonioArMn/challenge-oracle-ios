@@ -17,6 +17,7 @@ protocol HomePresenterProtocol: AnyObject {
     var title: String { get }
     func viewDidLoad()
     func didEnterTextInSearchBar(text: String, isFiltering: Bool)
+    func didSelectQuestion(question: Question)
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {
@@ -54,6 +55,11 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
         } else {
             view?.displayQuestions(questions: [])
         }
+    }
+    
+    func didSelectQuestion(question: Question) {
+        guard let view = self.view as? UIViewController else { return }
+        wireframe?.presentDetailModule(withQuestion: question, fromViewController: view)
     }
     
     // MARK: Interactor --> Presenter
