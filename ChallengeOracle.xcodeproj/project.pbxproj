@@ -15,6 +15,14 @@
 		AF654D7227A333EC0027E79A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF654D7027A333EC0027E79A /* LaunchScreen.storyboard */; };
 		AF654D7D27A333EC0027E79A /* ChallengeOracleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D7C27A333EC0027E79A /* ChallengeOracleTests.swift */; };
 		AF654D8827A333EC0027E79A /* ChallengeOracleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D8727A333EC0027E79A /* ChallengeOracleUITests.swift */; };
+		AF654D9A27A335D80027E79A /* UserEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D9927A335D80027E79A /* UserEndpoints.swift */; };
+		AF654D9C27A335EB0027E79A /* URLSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D9B27A335EB0027E79A /* URLSessionLoader.swift */; };
+		AF654D9F27A336010027E79A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D9E27A336010027E79A /* NetworkClient.swift */; };
+		AF654DA127A336240027E79A /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DA027A336240027E79A /* HTTPTask.swift */; };
+		AF654DA327A336320027E79A /* HTTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DA227A336320027E79A /* HTTPLoader.swift */; };
+		AF654DA527A3363D0027E79A /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DA427A3363D0027E79A /* HTTP.swift */; };
+		AF654DA727A338930027E79A /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DA627A338930027E79A /* Encodable+.swift */; };
+		AF654DA927A338D40027E79A /* ImageCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DA827A338D40027E79A /* ImageCacheHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		AF654D8327A333EC0027E79A /* ChallengeOracleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeOracleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF654D8727A333EC0027E79A /* ChallengeOracleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOracleUITests.swift; sourceTree = "<group>"; };
 		AF654D8927A333EC0027E79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF654D9927A335D80027E79A /* UserEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoints.swift; sourceTree = "<group>"; };
+		AF654D9B27A335EB0027E79A /* URLSessionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionLoader.swift; sourceTree = "<group>"; };
+		AF654D9E27A336010027E79A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		AF654DA027A336240027E79A /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		AF654DA227A336320027E79A /* HTTPLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoader.swift; sourceTree = "<group>"; };
+		AF654DA427A3363D0027E79A /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		AF654DA627A338930027E79A /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		AF654DA827A338D40027E79A /* ImageCacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,10 @@
 		AF654D6427A333E90027E79A /* ChallengeOracle */ = {
 			isa = PBXGroup;
 			children = (
+				AF654D9827A3352E0027E79A /* Network */,
+				AF654D9727A335260027E79A /* Extensions */,
+				AF654D9627A335200027E79A /* Helpers */,
+				AF654D9527A335170027E79A /* Modules */,
 				AF654D6527A333E90027E79A /* AppDelegate.swift */,
 				AF654D6727A333E90027E79A /* SceneDelegate.swift */,
 				AF654D6927A333E90027E79A /* ViewController.swift */,
@@ -126,6 +146,50 @@
 				AF654D8927A333EC0027E79A /* Info.plist */,
 			);
 			path = ChallengeOracleUITests;
+			sourceTree = "<group>";
+		};
+		AF654D9527A335170027E79A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AF654D9627A335200027E79A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF654DA827A338D40027E79A /* ImageCacheHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AF654D9727A335260027E79A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF654DA627A338930027E79A /* Encodable+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AF654D9827A3352E0027E79A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AF654D9D27A335F10027E79A /* HTTP */,
+				AF654D9927A335D80027E79A /* UserEndpoints.swift */,
+				AF654D9B27A335EB0027E79A /* URLSessionLoader.swift */,
+				AF654D9E27A336010027E79A /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AF654D9D27A335F10027E79A /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				AF654DA027A336240027E79A /* HTTPTask.swift */,
+				AF654DA227A336320027E79A /* HTTPLoader.swift */,
+				AF654DA427A3363D0027E79A /* HTTP.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +322,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF654DA527A3363D0027E79A /* HTTP.swift in Sources */,
+				AF654DA127A336240027E79A /* HTTPTask.swift in Sources */,
+				AF654D9C27A335EB0027E79A /* URLSessionLoader.swift in Sources */,
+				AF654DA327A336320027E79A /* HTTPLoader.swift in Sources */,
 				AF654D6A27A333E90027E79A /* ViewController.swift in Sources */,
+				AF654D9A27A335D80027E79A /* UserEndpoints.swift in Sources */,
 				AF654D6627A333E90027E79A /* AppDelegate.swift in Sources */,
+				AF654DA727A338930027E79A /* Encodable+.swift in Sources */,
 				AF654D6827A333E90027E79A /* SceneDelegate.swift in Sources */,
+				AF654D9F27A336010027E79A /* NetworkClient.swift in Sources */,
+				AF654DA927A338D40027E79A /* ImageCacheHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
