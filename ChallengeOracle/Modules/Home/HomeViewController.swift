@@ -53,6 +53,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         questionsTableView.dataSource = self
         questionsTableView.delegate = self
         questionsTableView.separatorColor = UIColor.clear
+        questionsTableView.register(QuestionTableViewCell.nib, forCellReuseIdentifier: QuestionTableViewCell.identifier)
     }
     
     func setUpSearchController() {
@@ -77,10 +78,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let question = questions[indexPath.row]
-        cell.textLabel?.text = question.title
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as? QuestionTableViewCell {
+            let question = questions[indexPath.row]
+            cell.setUp(withQuestion: question)
+            return cell
+        }
+        return UITableViewCell()
     }
 }
 
