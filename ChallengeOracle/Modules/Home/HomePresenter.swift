@@ -14,7 +14,9 @@ protocol HomePresenterProtocol: AnyObject {
     var wireframe: HomeWireframeProtocol? { get set }
     
     /// View --> Presenter
+    var title: String { get }
     func viewDidLoad()
+    func didEnterTextInSearchBar(text: String, isFiltering: Bool)
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {
@@ -29,15 +31,29 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     var wireframe: HomeWireframeProtocol?
     
     // MARK: View --> Presenter
+    var title: String {
+        return interactor?.moduleTitle ?? ""
+    }
+    
     func viewDidLoad() {
-        interactor?.fetchQuestions(text: "swiftui", completion: { [weak self] result in
-            switch result {
-            case .success(let questionsResponse):
-                print(questionsResponse)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        })
+        view?.setUpUI()
+        view?.setUpTableView()
+        view?.setUpSearchController()
+    }
+    
+    func didEnterTextInSearchBar(text: String, isFiltering: Bool) {
+        if isFiltering {
+            interactor?.fetchQuestions(text: text, completion: { [weak self] result in
+                switch result {
+                case .success(let questionsResponse):
+                    self?.view?.displayQuestions(questions: questionsResponse.decodedObject.items)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            })
+        } else {
+            view?.displayQuestions(questions: [])
+        }
     }
     
     // MARK: Interactor --> Presenter
