@@ -17,7 +17,8 @@ protocol HomePresenterProtocol: AnyObject {
     var title: String { get }
     func viewDidLoad()
     func didEnterTextInSearchBar(text: String, isFiltering: Bool)
-    func didSelectQuestion(question: Question)
+    func didSelectQuestionItem(questionItem: QuestionItem)
+    func willDisplayCell(withIndexPath indexPath: IndexPath)
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {
@@ -31,6 +32,16 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     var interactor: HomeInteractorInputProtocol?
     var wireframe: HomeWireframeProtocol?
     
+    // MARK: Private Properties
+    private var currentText = ""
+    private var currentItems: [QuestionItem] = []
+    private var currentQuestionsCount: Int {
+        return currentItems.count
+    }
+    private var timer: Timer?
+    private var shouldRequestMoreQuestions = false
+    private var isLoading = false
+    
     // MARK: View --> Presenter
     var title: String {
         return interactor?.moduleTitle ?? ""
@@ -43,24 +54,67 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     }
     
     func didEnterTextInSearchBar(text: String, isFiltering: Bool) {
+        timer?.invalidate()
         if isFiltering {
-            interactor?.fetchQuestions(text: text, completion: { [weak self] result in
-                switch result {
-                case .success(let questionsResponse):
-                    self?.view?.displayQuestions(questions: questionsResponse.decodedObject.items)
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            })
+            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
+            currentText = text
+            currentItems = []
         } else {
-            view?.displayQuestions(questions: [])
+            shouldRequestMoreQuestions = false
+            isLoading = false
+            view?.displayQuestionsItems(questionItems: [])
         }
     }
     
-    func didSelectQuestion(question: Question) {
-        guard let view = self.view as? UIViewController else { return }
-        wireframe?.presentDetailModule(withQuestion: question, fromViewController: view)
+    func didSelectQuestionItem(questionItem: QuestionItem) {
+        guard let view = self.view as? UIViewController,
+              let questionCellItem = questionItem as? QuestionCellItem else { return }
+        wireframe?.presentDetailModule(withQuestion: questionCellItem.question, fromViewController: view)
+    }
+    
+    func willDisplayCell(withIndexPath indexPath: IndexPath) {
+        if indexPath.row == currentQuestionsCount - 1 {
+            if shouldRequestMoreQuestions {
+                if !isLoading {
+                    currentItems.append(LoaderCellItem())
+                    view?.displayQuestionsItems(questionItems: self.currentItems)
+                    isLoading = true
+                    requestQuestions(isNewText: false)
+                }
+            } else {
+                shouldRequestMoreQuestions = true
+            }
+        }
+    }
+    
+    func requestQuestions(isNewText: Bool = true) {
+        interactor?.fetchQuestions(text: currentText, completion: { [weak self] result in
+            switch result {
+            case .success(let questionsResponse):
+                self?.manageQuestionResponse(questionsResponse: questionsResponse.decodedObject, isNewText: isNewText)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
+    }
+    
+    func manageQuestionResponse(questionsResponse: QuestionsResponse, isNewText: Bool) {
+        let newItems = questionsResponse.items.map { QuestionCellItem(question: $0) }
+        if isNewText {
+            currentItems.removeAll()
+        } else {
+            currentItems.removeLast()
+        }
+        self.currentItems.append(contentsOf: newItems)
+        self.isLoading = false
+        self.view?.displayQuestionsItems(questionItems: self.currentItems)
     }
     
     // MARK: Interactor --> Presenter
+    // add if needed..
+    
+    // MARK: Private Methods
+    @objc private func fireTimer() {
+        requestQuestions()
+    }
 }

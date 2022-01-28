@@ -16,12 +16,12 @@ enum UserEndpoints {
         
         switch self {
         case .searchQuestion(let text):
-            host.append("/2.2/questions?site=stackoverflow&order=desc&sort=votes&tagged=\(text)&pagesize=10")
+            host.append("/2.2/questions?site=stackoverflow&order=desc&sort=votes&tagged=\(text.lowercased())&pagesize=10")
         case .questionDetail(let id):
             host.append("/2.2/questions/\(id)?site=stackoverflow") // Not needed..
         }
 
-        guard let url = URL(string: host) else {
+        guard let percentString = host.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: percentString) else {
             fatalError()
         }
         return url

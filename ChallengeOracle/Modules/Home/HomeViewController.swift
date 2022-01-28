@@ -14,7 +14,7 @@ protocol HomeViewProtocol: AnyObject {
     func setUpUI()
     func setUpTableView()
     func setUpSearchController()
-    func displayQuestions(questions: [Question])
+    func displayQuestionsItems(questionItems: [QuestionItem])
 }
 
 class HomeViewController: UIViewController, HomeViewProtocol {
@@ -32,7 +32,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     }
     
     // MARK: Private Properties
-    private var questions: [Question] = []
+    private var questionItems: [QuestionItem] = []
     
     // MARK: Outlets
     @IBOutlet weak var questionsTableView: UITableView!
@@ -54,6 +54,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         questionsTableView.delegate = self
         questionsTableView.separatorColor = UIColor.clear
         questionsTableView.register(QuestionTableViewCell.nib, forCellReuseIdentifier: QuestionTableViewCell.identifier)
+        questionsTableView.register(LoaderTableViewCell.nib, forCellReuseIdentifier: LoaderTableViewCell.identifier)
     }
     
     func setUpSearchController() {
@@ -62,33 +63,46 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         self.definesPresentationContext = true
     }
     
-    func displayQuestions(questions: [Question]) {
-        self.questions = questions
+    func displayQuestionsItems(questionItems: [QuestionItem]) {
+        self.questionItems = questionItems
         DispatchQueue.main.async { [weak self] in
             self?.questionsTableView.reloadData()
         }
     }
-
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questions.count
+        return questionItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as? QuestionTableViewCell {
-            let question = questions[indexPath.row]
-            cell.setUp(withQuestion: question)
-            return cell
+        let questionItem = questionItems[indexPath.row]
+        switch questionItem.type {
+        case .question:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as? QuestionTableViewCell,
+               let questionCellItem = questionItem as? QuestionCellItem {
+                cell.setUp(withQuestion: questionCellItem.question)
+                return cell
+            }
+        case .loader:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: LoaderTableViewCell.identifier, for: indexPath) as? LoaderTableViewCell,
+               let _ = questionItem as? LoaderCellItem {
+                cell.setUp()
+                return cell
+            }
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let question = questions[indexPath.row]
-        presenter?.didSelectQuestion(question: question)
+        let questionItem = questionItems[indexPath.row]
+        presenter?.didSelectQuestionItem(questionItem: questionItem)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        presenter?.willDisplayCell(withIndexPath: indexPath)
     }
 }
 

@@ -50,4 +50,5 @@ class DetailInteractor: DetailInteractorInputProtocol {
     }
     
     // MARK: Private Methods
+    // add if needed..
 }

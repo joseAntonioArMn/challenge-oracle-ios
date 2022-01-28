@@ -48,6 +48,7 @@ class DetailPresenter: DetailPresenterProtocol, DetailInteractorOutputProtocol {
     }
     
     // MARK: Interactor --> Presenter
+    // add if needed..
     
     // MARK: Private Methods
     private func buildDetailItems() -> [DetailItem] {

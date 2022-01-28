@@ -40,6 +40,9 @@
 		AF654DD727A3614A0027E79A /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF654DD527A3614A0027E79A /* UserTableViewCell.xib */; };
 		AF654DD927A363AF0027E79A /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DD827A363AF0027E79A /* UIImageView+.swift */; };
 		AF654DDB27A365C70027E79A /* DetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DDA27A365C70027E79A /* DetailEntities.swift */; };
+		AF654DDE27A36D510027E79A /* LoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DDC27A36D510027E79A /* LoaderTableViewCell.swift */; };
+		AF654DDF27A36D510027E79A /* LoaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF654DDD27A36D510027E79A /* LoaderTableViewCell.xib */; };
+		AF654DE127A36DFF0027E79A /* QuestionsCellEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DE027A36DFF0027E79A /* QuestionsCellEntities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,9 @@
 		AF654DD527A3614A0027E79A /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		AF654DD827A363AF0027E79A /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		AF654DDA27A365C70027E79A /* DetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntities.swift; sourceTree = "<group>"; };
+		AF654DDC27A36D510027E79A /* LoaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderTableViewCell.swift; sourceTree = "<group>"; };
+		AF654DDD27A36D510027E79A /* LoaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderTableViewCell.xib; sourceTree = "<group>"; };
+		AF654DE027A36DFF0027E79A /* QuestionsCellEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCellEntities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +271,7 @@
 			children = (
 				AF654DBB27A33E640027E79A /* QuestionsResponse.swift */,
 				AF654DBD27A33E6D0027E79A /* Question.swift */,
+				AF654DE027A36DFF0027E79A /* QuestionsCellEntities.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -292,6 +299,8 @@
 				AF654DB327A33AC50027E79A /* HomeViewController.swift */,
 				AF654DBF27A34D790027E79A /* QuestionTableViewCell.swift */,
 				AF654DC027A34D790027E79A /* QuestionTableViewCell.xib */,
+				AF654DDC27A36D510027E79A /* LoaderTableViewCell.swift */,
+				AF654DDD27A36D510027E79A /* LoaderTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -444,6 +453,7 @@
 			files = (
 				AF654D7227A333EC0027E79A /* LaunchScreen.storyboard in Resources */,
 				AF654DC227A34D7A0027E79A /* QuestionTableViewCell.xib in Resources */,
+				AF654DDF27A36D510027E79A /* LoaderTableViewCell.xib in Resources */,
 				AF654D6F27A333EC0027E79A /* Assets.xcassets in Resources */,
 				AF654DCB27A358F60027E79A /* DetailStoryboard.storyboard in Resources */,
 				AF654DD727A3614A0027E79A /* UserTableViewCell.xib in Resources */,
@@ -479,11 +489,13 @@
 				AF654DA127A336240027E79A /* HTTPTask.swift in Sources */,
 				AF654D9C27A335EB0027E79A /* URLSessionLoader.swift in Sources */,
 				AF654DB627A33B110027E79A /* HomeInteractor.swift in Sources */,
+				AF654DE127A36DFF0027E79A /* QuestionsCellEntities.swift in Sources */,
 				AF654DD127A359230027E79A /* DetailPresenter.swift in Sources */,
 				AF654DA327A336320027E79A /* HTTPLoader.swift in Sources */,
 				AF654D9A27A335D80027E79A /* UserEndpoints.swift in Sources */,
 				AF654D6627A333E90027E79A /* AppDelegate.swift in Sources */,
 				AF654DA727A338930027E79A /* Encodable+.swift in Sources */,
+				AF654DDE27A36D510027E79A /* LoaderTableViewCell.swift in Sources */,
 				AF654DD927A363AF0027E79A /* UIImageView+.swift in Sources */,
 				AF654DC427A34D9B0027E79A /* UITableViewCell+.swift in Sources */,
 				AF654DDB27A365C70027E79A /* DetailEntities.swift in Sources */,
