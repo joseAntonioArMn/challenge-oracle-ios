@@ -106,4 +106,10 @@ class HomePresenterTests: XCTestCase {
         XCTAssertEqual(15, presenter?.currentItems.count)
         XCTAssertEqual(1, view?.displayQuestionsItemsCalls)
     }
+    
+    func testTags() {
+        let owner = Owner(name: "", id: 0, reputation: 0, type: "", imageURL: "", link: "")
+        let question = Question(title: "", tags: ["swift", "python", "oracle"], creationDate: 0, owner: owner, viewsCount: 0, answersCount: 0, score: 0, id: 0)
+        XCTAssertEqual("swift, python, oracle", question.tagsString)
+    }
 }

@@ -11,7 +11,6 @@
 		AF654D6827A333E90027E79A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D6727A333E90027E79A /* SceneDelegate.swift */; };
 		AF654D6F27A333EC0027E79A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF654D6E27A333EC0027E79A /* Assets.xcassets */; };
 		AF654D7227A333EC0027E79A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF654D7027A333EC0027E79A /* LaunchScreen.storyboard */; };
-		AF654D7D27A333EC0027E79A /* ChallengeOracleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D7C27A333EC0027E79A /* ChallengeOracleTests.swift */; };
 		AF654D8827A333EC0027E79A /* ChallengeOracleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D8727A333EC0027E79A /* ChallengeOracleUITests.swift */; };
 		AF654D9A27A335D80027E79A /* UserEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D9927A335D80027E79A /* UserEndpoints.swift */; };
 		AF654D9C27A335EB0027E79A /* URLSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D9B27A335EB0027E79A /* URLSessionLoader.swift */; };
@@ -82,7 +81,6 @@
 		AF654D7127A333EC0027E79A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF654D7327A333EC0027E79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF654D7827A333EC0027E79A /* ChallengeOracleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeOracleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF654D7C27A333EC0027E79A /* ChallengeOracleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOracleTests.swift; sourceTree = "<group>"; };
 		AF654D7E27A333EC0027E79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF654D8327A333EC0027E79A /* ChallengeOracleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeOracleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF654D8727A333EC0027E79A /* ChallengeOracleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOracleUITests.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 			children = (
 				AF654DE327A39C750027E79A /* Network */,
 				AF654DE227A39C6B0027E79A /* Modules */,
-				AF654D7C27A333EC0027E79A /* ChallengeOracleTests.swift */,
 				AF654D7E27A333EC0027E79A /* Info.plist */,
 			);
 			path = ChallengeOracleTests;
@@ -636,7 +633,6 @@
 				AF654DE727A39CA70027E79A /* JSONDataLoader.swift in Sources */,
 				AF654DF427A39E940027E79A /* HomePresenterMock.swift in Sources */,
 				AF654DEE27A39D7F0027E79A /* EndPointsTests.swift in Sources */,
-				AF654D7D27A333EC0027E79A /* ChallengeOracleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
