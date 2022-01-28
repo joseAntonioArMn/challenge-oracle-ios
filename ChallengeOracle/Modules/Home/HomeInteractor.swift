@@ -14,7 +14,9 @@ protocol HomeInteractorInputProtocol: AnyObject {
     
     /// Presenter --> Interactor
     var moduleTitle: String { get }
-    func fetchQuestions(text: String, completion: @escaping (Result<JSONResponse<QuestionsResponse>, NetworkClientError>) -> Void)
+    var hasMore: Bool { get }
+    func setQuestionsResponse(questionsResponse: QuestionsResponse)
+    func fetchQuestions(text: String, isNewText: Bool, completion: @escaping (Result<JSONResponse<QuestionsResponse>, NetworkClientError>) -> Void)
 }
 
 class HomeInteractor: HomeInteractorInputProtocol {
@@ -23,13 +25,27 @@ class HomeInteractor: HomeInteractorInputProtocol {
     weak var presenter: HomeInteractorOutputProtocol?
     var networkClient: NetworkClientType = NetworkClient()
     
+    // MARK: Private Properties
+    var questionsResponse: QuestionsResponse?
+    var pageCounter = 0
+    
     // MARK: Presenter --> Interactor
     var moduleTitle: String {
         return "Top Questions"
     }
     
-    func fetchQuestions(text: String, completion: @escaping (Result<JSONResponse<QuestionsResponse>, NetworkClientError>) -> Void) {
-        let request = HTTPRequest(url: UserEndpoints.searchQuestion(text: text).url)
+    var hasMore: Bool {
+        return questionsResponse?.hasMore ?? false
+    }
+    
+    func fetchQuestions(text: String, isNewText: Bool, completion: @escaping (Result<JSONResponse<QuestionsResponse>, NetworkClientError>) -> Void) {
+        if isNewText { pageCounter = 0 }
+        pageCounter += 1
+        let request = HTTPRequest(url: UserEndpoints.searchQuestion(text: text, page: pageCounter).url)
         networkClient.decodedJSONRequest(type: QuestionsResponse.self, request: request, completion: completion)
+    }
+    
+    func setQuestionsResponse(questionsResponse: QuestionsResponse) {
+        self.questionsResponse = questionsResponse
     }
 }

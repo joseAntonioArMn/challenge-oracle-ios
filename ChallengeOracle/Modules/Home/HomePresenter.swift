@@ -88,14 +88,18 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     }
     
     func requestQuestions(isNewText: Bool = true) {
-        interactor?.fetchQuestions(text: currentText, completion: { [weak self] result in
-            switch result {
-            case .success(let questionsResponse):
-                self?.manageQuestionResponse(questionsResponse: questionsResponse.decodedObject, isNewText: isNewText)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        })
+        guard let hasMore = interactor?.hasMore else { return }
+        if (isNewText) || (!isNewText && hasMore) {
+            interactor?.fetchQuestions(text: currentText, isNewText: isNewText, completion: { [weak self] result in
+                switch result {
+                case .success(let questionsResponse):
+                    self?.interactor?.setQuestionsResponse(questionsResponse: questionsResponse.decodedObject)
+                    self?.manageQuestionResponse(questionsResponse: questionsResponse.decodedObject, isNewText: isNewText)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            })
+        }
     }
     
     func manageQuestionResponse(questionsResponse: QuestionsResponse, isNewText: Bool) {
