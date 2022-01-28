@@ -29,6 +29,24 @@ struct Question: Decodable {
     }
 }
 
+extension Question {
+    var tagsString: String {
+        var string = ""
+        for (index, tag) in tags.enumerated() {
+            if index == tags.count - 1 {
+                string = string + "\(tag)"
+            } else {
+                string = string + "\(tag), "
+            }
+        }
+        return string
+    }
+    
+    var date: Date {
+        return Date(seconds: creationDate)
+    }
+}
+
 struct Owner: Decodable {
     let name: String
     let id: Int

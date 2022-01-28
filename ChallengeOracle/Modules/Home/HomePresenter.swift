@@ -61,7 +61,7 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     func didEnterTextInSearchBar(text: String, isFiltering: Bool) {
         timer?.invalidate()
         if isFiltering {
-            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
             currentText = text
             currentItems = []
         } else {

@@ -49,8 +49,8 @@ class QuestionTableViewCell: UITableViewCell {
     // MARK: Public Methods
     func setUp(withQuestion question: Question, isSelectable: Bool = true) {
         titleLabel.text = question.title
-        tagsLabel.text = "\(question.tags)"
-        dateLabel.text = "\(question.creationDate)"
+        tagsLabel.text = "\(question.tagsString)"
+        dateLabel.text = "\(question.date.getFormattedDate())"
         scoreLabel.text = "\(question.score)"
         answersLabel.text = "\(question.answersCount)"
         viewsLabel.text = "\(question.viewsCount)"

@@ -54,6 +54,7 @@
 		AF654DFC27A3A2390027E79A /* SearchQuestionsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AF654DFB27A3A2390027E79A /* SearchQuestionsResponse.json */; };
 		AF654DFE27A3A5900027E79A /* EmptyJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = AF654DFD27A3A5900027E79A /* EmptyJSON.json */; };
 		AF654E0027A3A5DD0027E79A /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DFF27A3A5DD0027E79A /* HomePresenterTests.swift */; };
+		AF654E0227A3B3000027E79A /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654E0127A3B3000027E79A /* Date+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		AF654DFB27A3A2390027E79A /* SearchQuestionsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchQuestionsResponse.json; sourceTree = "<group>"; };
 		AF654DFD27A3A5900027E79A /* EmptyJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmptyJSON.json; sourceTree = "<group>"; };
 		AF654DFF27A3A5DD0027E79A /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		AF654E0127A3B3000027E79A /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 				AF654DA627A338930027E79A /* Encodable+.swift */,
 				AF654DC327A34D9B0027E79A /* UITableViewCell+.swift */,
 				AF654DD827A363AF0027E79A /* UIImageView+.swift */,
+				AF654E0127A3B3000027E79A /* Date+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				AF654DA127A336240027E79A /* HTTPTask.swift in Sources */,
 				AF654D9C27A335EB0027E79A /* URLSessionLoader.swift in Sources */,
 				AF654DB627A33B110027E79A /* HomeInteractor.swift in Sources */,
+				AF654E0227A3B3000027E79A /* Date+.swift in Sources */,
 				AF654DE127A36DFF0027E79A /* QuestionsCellEntities.swift in Sources */,
 				AF654DD127A359230027E79A /* DetailPresenter.swift in Sources */,
 				AF654DA327A336320027E79A /* HTTPLoader.swift in Sources */,
