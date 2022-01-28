@@ -15,6 +15,7 @@ protocol HomeInteractorInputProtocol: AnyObject {
     /// Presenter --> Interactor
     var moduleTitle: String { get }
     var hasMore: Bool { get }
+    var pageCounter: Int { get }
     func setQuestionsResponse(questionsResponse: QuestionsResponse)
     func fetchQuestions(text: String, isNewText: Bool, completion: @escaping (Result<JSONResponse<QuestionsResponse>, NetworkClientError>) -> Void)
 }
@@ -25,9 +26,11 @@ class HomeInteractor: HomeInteractorInputProtocol {
     weak var presenter: HomeInteractorOutputProtocol?
     var networkClient: NetworkClientType = NetworkClient()
     
-    // MARK: Private Properties
-    var questionsResponse: QuestionsResponse?
+    // MARK: Public Properties
     var pageCounter = 0
+    
+    // MARK: Private Properties
+    private var questionsResponse: QuestionsResponse?
     
     // MARK: Presenter --> Interactor
     var moduleTitle: String {

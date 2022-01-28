@@ -12,6 +12,8 @@ protocol HomePresenterProtocol: AnyObject {
     var view: HomeViewProtocol? { get set }
     var interactor: HomeInteractorInputProtocol? { get set }
     var wireframe: HomeWireframeProtocol? { get set }
+    var currentText: String { get set }
+    var currentItems: [QuestionItem] { get set }
     
     /// View --> Presenter
     var title: String { get }
@@ -19,6 +21,7 @@ protocol HomePresenterProtocol: AnyObject {
     func didEnterTextInSearchBar(text: String, isFiltering: Bool)
     func didSelectQuestionItem(questionItem: QuestionItem)
     func willDisplayCell(withIndexPath indexPath: IndexPath)
+    func manageQuestionResponse(questionsResponse: QuestionsResponse, isNewText: Bool)
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {
@@ -32,9 +35,11 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     var interactor: HomeInteractorInputProtocol?
     var wireframe: HomeWireframeProtocol?
     
+    // MARK: Public Properties
+    var currentText = ""
+    var currentItems: [QuestionItem] = []
+    
     // MARK: Private Properties
-    private var currentText = ""
-    private var currentItems: [QuestionItem] = []
     private var currentQuestionsCount: Int {
         return currentItems.count
     }
