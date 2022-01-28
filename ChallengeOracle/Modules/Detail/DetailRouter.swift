@@ -11,6 +11,7 @@ import UIKit
 protocol DetailWireframeProtocol: AnyObject {
     /// Presenter --> Wireframe
     static func presentDetailModule(withQuestion question: Question, fromViewController viewController: UIViewController)
+    func goToLink(link: String)
 }
 
 class DetailWireframe: DetailWireframeProtocol {
@@ -32,5 +33,12 @@ class DetailWireframe: DetailWireframeProtocol {
         
         /// Presenting
         viewController.navigationController?.pushViewController(view, animated: true)
+    }
+    
+    // MARK: Presenter --> Router
+    func goToLink(link: String) {
+        if let url = URL(string: link) {
+            UIApplication.shared.open(url)
+        }
     }
 }

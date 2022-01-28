@@ -15,6 +15,7 @@ struct Question: Decodable {
     let viewsCount: Int
     let answersCount: Int
     let score: Int
+    let id: Int
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -24,6 +25,7 @@ struct Question: Decodable {
         case viewsCount = "view_count"
         case answersCount = "answer_count"
         case score
+        case id = "question_id"
     }
 }
 

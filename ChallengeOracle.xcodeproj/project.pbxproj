@@ -36,6 +36,10 @@
 		AF654DCF27A359180027E79A /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DCE27A359180027E79A /* DetailInteractor.swift */; };
 		AF654DD127A359230027E79A /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DD027A359230027E79A /* DetailPresenter.swift */; };
 		AF654DD327A3592E0027E79A /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DD227A3592E0027E79A /* DetailRouter.swift */; };
+		AF654DD627A3614A0027E79A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DD427A3614A0027E79A /* UserTableViewCell.swift */; };
+		AF654DD727A3614A0027E79A /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF654DD527A3614A0027E79A /* UserTableViewCell.xib */; };
+		AF654DD927A363AF0027E79A /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DD827A363AF0027E79A /* UIImageView+.swift */; };
+		AF654DDB27A365C70027E79A /* DetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654DDA27A365C70027E79A /* DetailEntities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,10 @@
 		AF654DCE27A359180027E79A /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		AF654DD027A359230027E79A /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		AF654DD227A3592E0027E79A /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		AF654DD427A3614A0027E79A /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		AF654DD527A3614A0027E79A /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		AF654DD827A363AF0027E79A /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		AF654DDA27A365C70027E79A /* DetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +202,7 @@
 			children = (
 				AF654DA627A338930027E79A /* Encodable+.swift */,
 				AF654DC327A34D9B0027E79A /* UITableViewCell+.swift */,
+				AF654DD827A363AF0027E79A /* UIImageView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +307,7 @@
 		AF654DC627A358C40027E79A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				AF654DDA27A365C70027E79A /* DetailEntities.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -323,6 +333,8 @@
 			children = (
 				AF654DCA27A358F60027E79A /* DetailStoryboard.storyboard */,
 				AF654DCC27A3590A0027E79A /* DetailViewController.swift */,
+				AF654DD427A3614A0027E79A /* UserTableViewCell.swift */,
+				AF654DD527A3614A0027E79A /* UserTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -434,6 +446,7 @@
 				AF654DC227A34D7A0027E79A /* QuestionTableViewCell.xib in Resources */,
 				AF654D6F27A333EC0027E79A /* Assets.xcassets in Resources */,
 				AF654DCB27A358F60027E79A /* DetailStoryboard.storyboard in Resources */,
+				AF654DD727A3614A0027E79A /* UserTableViewCell.xib in Resources */,
 				AF654DB227A33AB50027E79A /* HomeStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF654DA527A3363D0027E79A /* HTTP.swift in Sources */,
+				AF654DD627A3614A0027E79A /* UserTableViewCell.swift in Sources */,
 				AF654DD327A3592E0027E79A /* DetailRouter.swift in Sources */,
 				AF654DBE27A33E6D0027E79A /* Question.swift in Sources */,
 				AF654DA127A336240027E79A /* HTTPTask.swift in Sources */,
@@ -470,7 +484,9 @@
 				AF654D9A27A335D80027E79A /* UserEndpoints.swift in Sources */,
 				AF654D6627A333E90027E79A /* AppDelegate.swift in Sources */,
 				AF654DA727A338930027E79A /* Encodable+.swift in Sources */,
+				AF654DD927A363AF0027E79A /* UIImageView+.swift in Sources */,
 				AF654DC427A34D9B0027E79A /* UITableViewCell+.swift in Sources */,
+				AF654DDB27A365C70027E79A /* DetailEntities.swift in Sources */,
 				AF654DCD27A3590A0027E79A /* DetailViewController.swift in Sources */,
 				AF654DCF27A359180027E79A /* DetailInteractor.swift in Sources */,
 				AF654DC127A34D790027E79A /* QuestionTableViewCell.swift in Sources */,

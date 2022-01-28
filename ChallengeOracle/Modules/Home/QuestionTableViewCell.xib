@@ -150,6 +150,7 @@
             <connections>
                 <outlet property="answersImageView" destination="1C2-8V-nlU" id="wj1-8s-XBa"/>
                 <outlet property="answersLabel" destination="UjN-Gl-lPh" id="WiH-tG-BNI"/>
+                <outlet property="buttonImageView" destination="NdA-U7-nFD" id="57a-zU-XMc"/>
                 <outlet property="dateLabel" destination="MET-ao-gfI" id="c1v-Z4-Ll1"/>
                 <outlet property="scoreImageView" destination="DEB-4c-czx" id="srK-LE-uR5"/>
                 <outlet property="scoreLabel" destination="Gfe-VG-Qqv" id="w54-yQ-Syx"/>

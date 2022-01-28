@@ -9,7 +9,7 @@ import Foundation
 
 enum UserEndpoints {
     case searchQuestion(text: String)
-    case questionDetail
+    case questionDetail(id: Int)
 
     var url: URL {
         var host = "https://api.stackexchange.com"
@@ -17,8 +17,8 @@ enum UserEndpoints {
         switch self {
         case .searchQuestion(let text):
             host.append("/2.2/questions?site=stackoverflow&order=desc&sort=votes&tagged=\(text)&pagesize=10")
-        case .questionDetail:
-            host.append("/2.2/questions/56433665?site=stackoverflow&order=desc&sort=votes&tagged=swiftui&pagesize=10&filter=!9_bDDxJY5")
+        case .questionDetail(let id):
+            host.append("/2.2/questions/\(id)?site=stackoverflow") // Not needed..
         }
 
         guard let url = URL(string: host) else {

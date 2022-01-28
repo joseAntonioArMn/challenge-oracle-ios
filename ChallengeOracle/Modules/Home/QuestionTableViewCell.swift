@@ -20,6 +20,7 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var viewsImageView: UIImageView!
     @IBOutlet weak var viewsLabel: UILabel!
     @IBOutlet weak var separatorView: UIView!
+    @IBOutlet weak var buttonImageView: UIImageView!
     
     // MARK: Life Cycle
     override func awakeFromNib() {
@@ -46,13 +47,15 @@ class QuestionTableViewCell: UITableViewCell {
     }
     
     // MARK: Public Methods
-    func setUp(withQuestion question: Question) {
+    func setUp(withQuestion question: Question, isSelectable: Bool = true) {
         titleLabel.text = question.title
         tagsLabel.text = "\(question.tags)"
         dateLabel.text = "\(question.creationDate)"
         scoreLabel.text = "\(question.score)"
         answersLabel.text = "\(question.answersCount)"
         viewsLabel.text = "\(question.viewsCount)"
+        buttonImageView.isHidden = !isSelectable
+        separatorView.isHidden = !isSelectable
     }
     
 }
